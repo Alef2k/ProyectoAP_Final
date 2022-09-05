@@ -1,18 +1,55 @@
-<div class="row">
+
+  <div class="row">
   <div class="container">
     <div class="logo">
       <img src="../../../assets/APLogo.png" id="logoAP">
     </div>
     <div class="redes">
-        <a href=""><img src="../../../assets/linkedin.png" id="linkedin"></a>
-        <a href=""><img src="../../../assets/twitter.png" id="twitter"></a>
-        <a href=""><img src="../../../assets/instagram.png" id="instagram"></a>
-        <a href=""><img src="../../../assets/github.png" id="github"></a>
-        <a href=""><img src="../../../assets/facebook.png" id="facebook"></a>
-        <button type="button" class="btn btn-outline-light"(click)="login()">INGRESO</button>
+        <a href="https://www.linkedin.com/in/ale-fer"><img src="../../../assets/linkedin.png" id="linkedin" target="blank"></a>
+        <a href="#!"><img src="../../../assets/twitter.png" id="twitter" target="blank"></a>
+        <a href="#!"><img src="../../../assets/instagram.png" id="instagram" target="blank"></a>
+        <a href="https://github.com/Alef2k"><img src="../../../assets/github.png" id="github" target="blank"></a>
+        <!--
+          <a href="https://www.facebook.com/alef2k"><img src="../../../assets/facebook.png" id="facebook" target="blank"></a>
+        -->
+        <a style="color: #838383;" href="https://www.facebook.com/alef2k" target="blank"><i class="fab fa-facebook-f "></i></a>
+          <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+          <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
     </div>
   </div>
 </div>
+
+<!--
+<div class="row>
+  <div class="grid">
+    <div class="g-col-6">
+
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#">
+            <img src="../../../assets/APLogo.png" alt="Argentina Programa" width="94" height="25"
+              class="d-inline-block align-text-top">
+            <div class="g-col-6">
+
+              <a style="color: #838383;" href="https://www.facebook.com/alef2k" target="blank"><i
+                  class="fab fa-facebook-f "></i></a>
+
+              <a style="color: #838383;" href="#!" target="blank"><i class="fab fa-twitter"></i></a>
+              <a style="color: #838383;" href="https://www.linkedin.com/in/ale-fer" target="blank">
+                <i class="fa fa-linkedin"></i></a>
+              <a style="color: #838383;" href="https://github.com/Alef2k" target="blank">
+                <i class="fa fa-github"></i></a>
+              <button type="button" class="btn btn-secondary btn-sm">Login</button>
+            </div>
+        </div>
+    </div>
+    </a>
+  </div>
+  </nav>
+</div>
+
+-->
 
 
 

@@ -36,3 +36,29 @@ img {
     margin: 0.2em;
   }
 }
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 20px;
+
+}
+
+.contenedor_ {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 16px;
+
+}
+
+.contenedor2 {
+  display: flex;
+  justify-content: center;
+  /* width: 150%;  */
+  max-width: 1100px;
+  margin: auto;
+
+}
