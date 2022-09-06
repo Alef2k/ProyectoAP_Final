@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f3f3;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ancho web y margenes laterales */
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 20px;
+
+}
+
+.contenedor_ {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 16px;
+
+}
+.contenedor_center {
+
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px;
+
+}
+
+.contenedor2 {
+  display: flex;
+  justify-content: center;
+  /* width: 150%;  */
+  max-width: 1100px;
+  margin: auto;
+
+}
+
+/* color en h1 h2
+h1 {
+  color: black;
+}
+
+h2 {
+  color: gray;
+}
+*/
+
+/* aplica estilos en clase con . */
+.destacado {
+  color: red;
+}
+
+
+/* contenedor punta curvas, se aplica estilos con ID # (no se puede repetir en una misma pagina)*/
+#borde {
+  border-radius: 5px;
+  margin-top: 5px;
+  border-color: rgb(219, 219, 219);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  height: auto;
+  border: 1px solid rgb(226, 223, 223);
+
+}
+
+/* Color Parrafos */
+p {
+  color: rgb(0, 0, 0);
+}
+
+/* Master Class */
+.profile-image {
+  border-radius: 50%;
+  width: 36%;
+  max-width: 142px;
+  height: 36%;
+  max-height: 142px;
+  margin-top: -100px;
+  z-index: 1;
+
+}
+
+.mat-card {
+  border-radius: 30px;
+  margin: 10px 10px;
+  padding: 20px;
+  border-color: #0a66c2;
+}
+
+.mat-card#first-card {
+  padding: 0;
+}
+
+#info-data {}
+
+#info-company {}
+
+#info-contact {}
+
+#info-details {}

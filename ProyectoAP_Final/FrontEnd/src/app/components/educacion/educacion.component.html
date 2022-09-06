@@ -1,4 +1,4 @@
-<div class="row">
+<div class="contenedor_" id="borde">
   <h2>Educación:</h2>
   <div class="col-lg-2">
     <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
@@ -12,7 +12,7 @@
       <tbody>
         <tr *ngFor="let Educacion of educacion">
           <td>
-            <h3>{{Educacion.nombreE}}</h3>
+            <h5>{{Educacion.nombreE}}</h5>
           </td>
           <td>{{Educacion.descripcionE}}</td>
           <td *ngIf="isLogged">

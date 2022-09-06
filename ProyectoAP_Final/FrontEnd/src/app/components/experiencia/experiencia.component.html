@@ -1,4 +1,4 @@
-<div class="row">
+<div class="contenedor_" id="borde">
   <h2>Experiencia laboral:</h2>
   <div class="col-lg-2">
     <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
@@ -12,7 +12,7 @@
       <tbody>
         <tr *ngFor="let Experiencia of expe">
           <td>
-            <h3>{{Experiencia.nombreE}}</h3>
+            <h5>{{Experiencia.nombreE}}</h5>
           </td>
           <td>{{Experiencia.descripcionE}}</td>
           <td *ngIf="isLogged">
