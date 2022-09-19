@@ -4,8 +4,21 @@
 Esta es una aplicación web full stack que permite mostrar diferentes datos de una persona, como datos personales, estudios cursados, experiencia laboral, 
 conocimiento de las tecnologías y sus proyectos. 
 
-# Link de acceso 📎
+# URL Portfolio Web📎
+
+> URL Portfolio Front End (Firebase)📎<br>
 https://frontendalef.web.app
+
+> URL del Repo GitHub del Front End 📎<br>
+https://github.com/Alef2k/ProyectoAP_Final/tree/main/ProyectoAP_Final/FrontEnd
+
+> URL del Repo GitHub del Back End 📎<br>
+https://github.com/Alef2k/ProyectoAP_Final/tree/main/ProyectoAP_Final/BackEnd
+
+> URL de APIs Back End (HEROKU)📎<br>
+https://backendalef.herokuapp.com
+
+
 
 # Usabilidad 🖱
 En la parte superior derecha se encuentra el botón para iniciar sesión con usuario y contraseña, y así poder hacer el CRUD de agregar, editar o eliminar datos.
@@ -25,15 +38,18 @@ Al seleccionar alguna de las opciones de modificación de datos, se desplegará 
 <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> 
 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> </p>
 
-• Angular
+• Git
+• Html
+• CSS
 • Bootstrap
+• Angular
 • Java
-• MySql
 • Postman
 • Springboot
 • Firebase
 • Heroku
 • Clever Cloud
+• MySql
 
 # Desarrollador del proyecto 👩‍💻
 Alejandro Fernandez
