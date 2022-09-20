@@ -17,6 +17,10 @@ https://github.com/Alef2k/ProyectoAP_Final/tree/main/ProyectoAP_Final/BackEnd
 
 > URL de APIs Back End (HEROKU)📎<br>
 https://backendalef.herokuapp.com
+/personas/traer/perfil/
+/explab/lista/
+/educacion/lista/
+
 
 
 
