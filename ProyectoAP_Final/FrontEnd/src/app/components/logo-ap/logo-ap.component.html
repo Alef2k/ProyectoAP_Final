@@ -14,8 +14,10 @@
 <!--
         <a style="color: #838383;" href="https://www.facebook.com/alef2k" target="blank"><i class="fab fa-facebook-f "></i></a>
         -->
+      <span>
           <button type="button" class="btn btn-secondary btn-sm" (click)="login()" *ngIf="!isLogged">INGRESO</button>
           <button type="button" class="btn btn-secondary btn-sm" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+      </span>
     </div>
   </div>
 </div>

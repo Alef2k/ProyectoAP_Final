@@ -1,4 +1,8 @@
-
+.container {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .redes{
   margin-right: 0.5em;
 }
@@ -11,17 +15,11 @@ img {
   margin-left: 0.5em;
 }
 
-.btn{
-  border-width: small;
-}
+
 
 
 /* --- para la vista de celular ---*/
-@media(max-width: 575px){
-.container {
-    flex-direction: column;
-  }
-
+@media(max-width: 570px){
   .redes {
     display: flex;
     flex-direction: column;
@@ -33,28 +31,3 @@ img {
   }
 }
 
-.contenedor {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  border-radius: 20px;
-
-}
-
-.contenedor_ {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  border-radius: 20px;
-  padding: 16px;
-
-}
-
-.contenedor2 {
-  display: flex;
-  justify-content: center;
-  /* width: 150%;  */
-  max-width: 1100px;
-  margin: auto;
-
-}
