@@ -2,7 +2,9 @@
 > Proyecto Integrador Argentina Programa.
  
 Esta es una aplicación web full stack que permite mostrar diferentes datos de una persona, como datos personales, estudios cursados, experiencia laboral, 
-conocimiento de las tecnologías y sus proyectos. 
+conocimiento de las tecnologías y sus proyectos. <br>
+
+
 
 # URL Portfolio Web📎
 
@@ -57,6 +59,7 @@ Al seleccionar alguna de las opciones de modificación de datos, se desplegará 
 
 # Desarrollador del proyecto 👩‍💻
 Alejandro Fernandez
-https://github.com/Alef2k
+https://github.com/Alef2k <br>
+Contactame: alef2k@hotmail.com
 
 
