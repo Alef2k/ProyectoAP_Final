@@ -19,11 +19,16 @@ https://github.com/Alef2k/ProyectoAP_Final/tree/main/ProyectoAP_Final/BackEnd
 
 > URL de APIs Back End (HEROKU)📎<br>
 https://backendalef.herokuapp.com <br>
+
+> Documentation API Swagger-ui <br>
+> http://localhost:8080/swagger-ui/index.html <br>
 /personas/traer/perfil/ <br>
+/personas/crear/  <br>
+/personas/editar/{id} <br>
+/personas/borrar/{id}  <br>
 /explab/lista/ <br>
-/educacion/lista/
-
-
+/educacion/lista/  <br>
+ 
 
 
 # Usabilidad 🖱
