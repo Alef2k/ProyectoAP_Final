@@ -6,10 +6,17 @@
 }
 
 body {
+
   background: #f3f3f3;
+  /*background: #fcb900; */
+  background-image: url("src/assets/fondo6.jpg");
+  background-attachment: fixed;
+
+
   font-family: 'Open Sans', sans-serif;
 
 }
+
 
 a {
   text-decoration: none;

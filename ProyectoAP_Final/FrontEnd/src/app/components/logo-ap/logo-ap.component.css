@@ -19,7 +19,7 @@ img {
 
 
 /* --- para la vista de celular ---*/
-@media(max-width: 570px){
+@media(max-width: 430px){
   .redes {
     display: flex;
     flex-direction: column;
@@ -29,5 +29,9 @@ img {
   .redes img {
     margin: 0.2em;
   }
+    #logoAP {
+      width: 190px;
+    }
 }
+
 

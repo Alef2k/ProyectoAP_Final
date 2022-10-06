@@ -1,5 +1,5 @@
-<div class="contenedor_" id="borde">
-  <h3>Educación:</h3>
+<div class="contenedor_ bg-light shadow-sm" id="borde" >
+  <h4><b>Educación:</b></h4>
   <div class="col-lg-2">
     <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
       Agregar Educacion
@@ -12,9 +12,9 @@
       <tbody>
         <tr *ngFor="let Educacion of educacion">
           <td>
-            <h5>{{Educacion.nombreE}}</h5>
+            <h6>{{Educacion.nombreE}}</h6>
           </td>
-          <td>{{Educacion.descripcionE}}</td>
+          <td style="text-align: end"><b>{{Educacion.descripcionE}}</b></td>
           <td *ngIf="isLogged">
             <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
               <i class="bi bi-pencil-fill"></i> EDITAR</button>
