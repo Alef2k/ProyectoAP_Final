@@ -44,7 +44,7 @@ ENGINE = InnoDB;
 -- Table `porfolio_web_fullstack`.`experiencia_laboral`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`experiencia_laboral` (
-  `id` INT NOT NULL,
+id` INT NOT NULL,
   `nombre_empresa` VARCHAR(45) NULL,
   `es_trabajo_actual` TINYINT NULL,
   `fecha_inicio` DATE NULL,
@@ -52,10 +52,10 @@ CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`experiencia_laboral` (
   `descripcion` VARCHAR(200) NULL,
   `persona_id` INT NOT NULL,
   `tipo_empleo_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `persona_id`, `tipo_empleo_id`),
-  INDEX `fk_experiencia_laboral_persona_idx` (`persona_id` ASC),
-  INDEX `fk_experiencia_laboral_tipo_empleo1_idx` (`tipo_empleo_id` ASC),
-  CONSTRAINT `fk_experiencia_laboral_persona`
+  PRIMARY KEY (`id`),
+  INDEX `fk_experiencia_laboral_persona1_idx` (`persona_id` ASC) ,
+  INDEX `fk_experiencia_laboral_tipo_empleo1_idx` (`tipo_empleo_id` ASC) ,
+  CONSTRAINT `fk_experiencia_laboral_persona1`
     FOREIGN KEY (`persona_id`)
     REFERENCES `porfolio_web_fullstack`.`persona` (`id`)
     ON DELETE NO ACTION
@@ -77,8 +77,8 @@ CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`educacion` (
   `titulo` VARCHAR(45) NULL,
   `recibio` TINYINT NULL,
   `persona_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `persona_id`),
-  INDEX `fk_educacion_persona1_idx` (`persona_id` ASC),
+  PRIMARY KEY (`id`),
+  INDEX `fk_educacion_persona1_idx` (`persona_id` ASC) ,
   CONSTRAINT `fk_educacion_persona1`
     FOREIGN KEY (`persona_id`)
     REFERENCES `porfolio_web_fullstack`.`persona` (`id`)
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`domicilio` (
   `pais` VARCHAR(45) NULL,
   `persona_id` INT NOT NULL,
   PRIMARY KEY (`id`, `persona_id`),
-  INDEX `fk_domicilio_persona1_idx` (`persona_id` ASC),
+  INDEX `fk_domicilio_persona1_idx` (`persona_id` ASC) ,
   CONSTRAINT `fk_domicilio_persona1`
     FOREIGN KEY (`persona_id`)
     REFERENCES `porfolio_web_fullstack`.`persona` (`id`)
@@ -115,13 +115,14 @@ CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`usuario` (
   `usuario` VARCHAR(45) NULL,
   `contraseña` VARCHAR(45) NULL,
   PRIMARY KEY (`id`, `persona_id`),
-  INDEX `fk_usuarios_persona1_idx` (`persona_id` ASC),
+  INDEX `fk_usuarios_persona1_idx` (`persona_id` ASC) ,
   CONSTRAINT `fk_usuarios_persona1`
     FOREIGN KEY (`persona_id`)
     REFERENCES `porfolio_web_fullstack`.`persona` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
 
 
 -- -----------------------------------------------------
@@ -133,10 +134,11 @@ CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`proyecto` (
   `descripcion` VARCHAR(200) NULL,
   `nombre_cliente` VARCHAR(45) NULL,
   `persona_id` INT NOT NULL,
+  `persona_id1` INT NOT NULL,
   PRIMARY KEY (`id`, `persona_id`),
-  INDEX `fk_proyectos_persona1_idx` (`persona_id` ASC),
-  CONSTRAINT `fk_proyectos_persona1`
-    FOREIGN KEY (`persona_id`)
+  INDEX `fk_proyecto_persona1_idx` (`persona_id1` ASC) ,
+  CONSTRAINT `fk_proyecto_persona1`
+    FOREIGN KEY (`persona_id1`)
     REFERENCES `porfolio_web_fullstack`.`persona` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -157,20 +159,19 @@ ENGINE = InnoDB;
 -- Table `porfolio_web_fullstack`.`tecnologia_has_proyecto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`tecnologia_has_proyecto` (
-  `tecnologias_id` INT NOT NULL,
-  `proyectos_id` INT NOT NULL,
-  `proyectos_persona_id` INT NOT NULL,
-  PRIMARY KEY (`tecnologias_id`, `proyectos_id`, `proyectos_persona_id`),
-  INDEX `fk_tecnologias_has_proyectos_proyectos1_idx` (`proyectos_id` ASC, `proyectos_persona_id` ASC),
-  INDEX `fk_tecnologias_has_proyectos_tecnologias1_idx` (`tecnologias_id` ASC),
-  CONSTRAINT `fk_tecnologias_has_proyectos_tecnologias1`
-    FOREIGN KEY (`tecnologias_id`)
-    REFERENCES `porfolio_web_fullstack`.`tecnologia` (`id`)
+  `proyecto_id` INT NOT NULL,
+  `proyecto_persona_id` INT NOT NULL,
+  `tecnologia_id` INT NOT NULL,
+  INDEX `fk_tecnologia_has_proyecto_proyecto1_idx` (`proyecto_id` ASC, `proyecto_persona_id` ASC) ,
+  INDEX `fk_tecnologia_has_proyecto_tecnologia1_idx` (`tecnologia_id` ASC) ,
+  CONSTRAINT `fk_tecnologia_has_proyecto_proyecto1`
+    FOREIGN KEY (`proyecto_id` , `proyecto_persona_id`)
+    REFERENCES `porfolio_web_fullstack`.`proyecto` (`id` , `persona_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_tecnologias_has_proyectos_proyectos1`
-    FOREIGN KEY (`proyectos_id` , `proyectos_persona_id`)
-    REFERENCES `porfolio_web_fullstack`.`proyecto` (`id` , `persona_id`)
+  CONSTRAINT `fk_tecnologia_has_proyecto_tecnologia1`
+    FOREIGN KEY (`tecnologia_id`)
+    REFERENCES `porfolio_web_fullstack`.`tecnologia` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
