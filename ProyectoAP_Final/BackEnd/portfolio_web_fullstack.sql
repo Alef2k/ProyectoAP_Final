@@ -7,10 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema porfolio_web_fullstack
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema porfolio_web_fullstack
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `portfolio_fullstack_ap` DEFAULT CHARACTER SET utf8 ;
 USE `porfolio_web_fullstack` ;
 
@@ -172,6 +168,22 @@ CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`tecnologia_has_proyecto` (
   CONSTRAINT `fk_tecnologia_has_proyecto_tecnologia1`
     FOREIGN KEY (`tecnologia_id`)
     REFERENCES `porfolio_web_fullstack`.`tecnologia` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `porfolio_web_fullstack`.`skills`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `porfolio_web_fullstack`.`skills` (
+  `idskills` INT NOT NULL,
+  `skill_name` VARCHAR(45) NULL,
+  `persona_id` INT NOT NULL,
+  PRIMARY KEY (`idskills`),
+  INDEX `fk_skills_persona1_idx` (`persona_id` ASC) VISIBLE,
+  CONSTRAINT `fk_skills_persona1`
+    FOREIGN KEY (`persona_id`)
+    REFERENCES `porfolio_web_fullstack`.`persona` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
